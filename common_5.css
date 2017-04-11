@@ -1,0 +1,193 @@
+body{
+	font-size:2vmax;
+	font-family:"MS Gothic";
+	overflow-x: hidden;
+}
+
+body{
+	padding:5% 10% 0 10%;
+	margin-bottom: -2.5em;
+	line-height:2em;
+}
+
+hr, .border{
+	border:0px;
+	padding:0.5em;
+}
+
+h2, h4, #tags{
+	text-align:center;
+}
+
+h4{
+	clear: both;
+	display: block;
+}
+
+h4, #caption, .newpage{
+	text-shadow: 0px 0px 3px #666666;
+}
+
+img{
+	clear: both;
+	display: block;
+	margin:auto;
+}
+
+.newpage{
+	padding:10% 5%;
+	border-style:outset;
+	border-color:#aaaaaa;
+	box-shadow:3px 3px 5px #aaaaaa;
+	font-weight:120;
+}
+
+#tags{
+	padding: 5px 30px;
+	color: rgba(168,0,0,0.8);
+	font-weight:bold;
+	text-shadow:0px 0px 3px rgba(255, 0, 0, 0.4);
+	box-shadow:
+		2px 2px 4px #aaaaaa;
+	border-image-source: url('assets/UISeason1_a.png');
+	border-image-slice: 30 fill;
+	border-image-width: 30px;
+	border-radius: 30px;
+}
+
+#info{
+	position: absolute;
+	width: 10em;
+	height: 6em;
+	right: -3em;
+	top: 1em;
+	padding: 1.3em 0 1em 0;
+	z-index: 1;
+	color: gold;
+	text-shadow: 1px 1px 2px goldenrod;
+	transform: rotate(35deg);
+}
+
+#info:before{
+	position: absolute;
+	top: -0.5em;
+	left: -2em;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: url('assets/UISeason1_d.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top center;
+	z-index: -1;
+	transform: rotate(-30deg); 
+}
+
+h2{
+	margin: 0.5em -3em;
+	padding: 1em;
+	border-style: solid;
+	color: rgba(188,23,55,0.8);
+	font-weight:bold;
+	box-shadow:
+		2px 2px 4px #aaaaaa;
+	border-image-source: url('assets/UISeason1_a.png');
+	border-image-slice: 30 fill;
+	border-image-width: 30px;
+	border-radius: 30px;
+	text-shadow:
+		1px 3px 6px #fff,
+		0 0 0 #000,
+		1px 3px 6px #fff,
+		0px 0px 3px rgba(255, 0, 0, 0.4);
+}
+
+fieldset{
+	border-image-source: url('assets/UISeason1_b.png');
+	border-image-slice: 90 138 60 138 fill;
+	border-width: 90px 138px 60px 138px;
+	border-image-repeat: round;
+}
+fieldset div{
+	color: black;
+	font-weight:bold;
+	border-image-source: url('assets/UISeason1_c.png');
+	border-image-slice: 25 fill;
+	border-image-width: 25px;
+	padding: 5px 30px;
+	margin: 0px -120px;
+	border-radius: 25px;
+	box-shadow: 2px 2px 2px rgba(120, 0, 0, 0.7);
+}
+
+fieldset legend{
+	position: absolute;
+	top: -45%;
+	left: 30%;
+	color: white;
+	text-shadow: -2px -2px 3px rgba(255, 255, 255, 0.4);
+	font-weight:bold;
+	border: none;
+	background: none;
+}
+
+body, #tags, fieldset{
+	position: relative;
+}
+body:before,
+#tags:before, fieldset:before{
+	left:0;
+	top:0%;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.3;
+	background-image: url('assets/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+#tags:before, fieldset:before{
+	opacity: 0.5;
+	filter: blur(3px);
+}
+fieldset:before{
+	top:-30%;
+	padding-bottom:5%;
+}
+
+.pagination{
+	border-style:solid;
+	border-image-source: url('assets/UISeason1_e.png');
+	border-image-repeat: round;
+	border-image-slice: 10 50 20 45 fill;
+	border-width: 10px 50px 20px 45px;
+}
+
+.pagination > li > a,
+.pagination > li > span{
+	background-color: rgba(255,255,255,0.3) !important;
+	border-color: rgba(196,33,79,1) !important;
+	color: rgba(255,255,255,1) !important;
+	text-shadow: 1px 1px 1px rgba(196,33,79, 0.4) !important;
+}
+.pagination > li > a:hover{
+	color: rgba(196,33,79,1) !important;
+	background-color: rgba(255,255,255,0.8) !important;
+}
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus{
+	background-color: rgba(255,255,255,0.1) !important;
+	border:none;
+}
+.pagination > .active > a:hover{
+	color: rgba(255,255,255,1) !important;
+	background-color: transparent !important;
+}
