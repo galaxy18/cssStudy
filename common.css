@@ -1,0 +1,191 @@
+body{
+	position: relative;
+	padding: 1%;
+	font-size:2vmax;
+	font-family:"MS Gothic";
+	overflow-x: hidden;
+	height: 95vh;
+}
+
+hr, .border{
+	border:0px;
+	padding:0.5em;
+}
+
+h1,h2{
+	text-shadow: 0px 0px 3px #666666;
+}
+
+h4{
+	clear: both;
+	display: block;
+}
+
+h4, #caption, .newpage{
+	text-shadow: 0px 0px 3px #666666;
+}
+
+img{
+	clear: both;
+	display: block;
+	margin:auto;
+}
+
+.newpage{
+	padding:10% 5%;
+	border-style:outset;
+	border-color:#aaaaaa;
+	box-shadow:3px 3px 5px #aaaaaa;
+	font-weight:120;
+}
+
+body, #tags, fieldset{
+	position: relative;
+}
+body:before,
+#tags:before, fieldset:before{
+	left:0;
+	top:0%;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.3;
+	background-image: url('assets/__www.pakutaso.com_shared_img_thumb_GAK_raitoup.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+#tags:before, fieldset:before{
+	opacity: 0.5;
+	filter: blur(3px);
+	background-size: 100vw auto;
+}
+fieldset:before{
+	top:5%;
+	height:90%;
+}
+
+#tags{
+	color: #fff;
+	font-weight:bold;
+	text-shadow:0px 0px 3px rgba(255, 255, 255, 0.4);
+	box-shadow:
+		0px 0px 8px rgb(42, 42, 42) inset, 3px 3px 5px #aaaaaa;
+	border-width: 10px;
+	border-style: solid;
+	border-image: linear-gradient(to bottom, rgba(192, 192, 192, 0.4), rgba(72, 72, 72, 0.5)) 1 1;
+
+	text-align: left;
+	font-size: 12px;
+	width: 25%;
+	max-height: 20%;
+	overflow-y: auto;
+	line-height: 15px;
+	word-wrap: break-word;
+  word-break: keep-all;
+	padding: 0 2%;
+	margin-top: 3%;
+	margin-bottom: 2%;
+}
+
+#info{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 10px;
+}
+
+h2{
+	text-align:center;
+	line-height:1.5em;
+	background: rgba(255,255,255,0.5);
+	box-shadow:0px 0px 8px rgba(152,152,152) inset;
+	width: 25%;
+	margin: 0px;
+	padding: 5px;
+	color:rgba(0,0,0,0.2);
+	text-shadow:1px 3px 6px #fff,0 0 0 #000,1px 3px 6px #fff;
+	font-size: 4vh;
+}
+fieldset{
+	box-shadow:0px 0px 8px rgba(152,152,152) inset,
+		3px 3px 5px #aaaaaa;
+	color: black;
+	text-shadow:0px 0px 3px rgba(255,255,255,0.6);
+	border-width: 10px;
+	border-style: solid;
+	border-image: linear-gradient(to bottom, 
+		rgba(182, 182, 182,0.8),
+		rgba(243, 243, 243,0.8)) 1 1;
+	width: 24%;
+	margin:2% 0 0 0;
+	font-weight:bold;
+	font-size: 14px;
+	line-height: 2em;
+	height: 45%;
+	overflow-y: auto;
+}
+fieldset>legend{
+	position:relative;
+	left:-30%;
+	box-shadow:0px 0px 8px rgba(152,152,152) inset,
+		3px 3px 5px #aaaaaa;
+	color: black;
+	font-weight:bold;
+	text-shadow:0px 0px 3px rgba(255,255,255,0.6);
+	border-width: 10px;
+	border-style: solid;
+	border-image: linear-gradient(to bottom, 
+		rgba(182, 182, 182,0.8),
+		rgba(243, 243, 243,0.8)) 1 1;
+	padding: 0 10px;
+}
+
+.pagination{
+	display: none !important;
+}
+.pagination:nth-last-child(1){
+	display: inline !important;
+	position: absolute;
+	left: 35%;
+	top: 0;
+	height:15%;
+}
+#frameContent{
+	position: absolute;
+	left: 30%;
+	margin:0 !important;
+	width: 57% !important;
+	top: 20%;
+}
+
+body{
+	/*perspective: 800px;
+	perspective-origin: 50% 50%;*/
+	perspective: 90vh;
+}
+#tags,
+h2{
+	transform: translateZ(-50px) rotateY(20deg);
+	transition: transform 2s;
+}
+#info,
+fieldset{
+	transform: translateX(20px) translateZ(-50px) rotateY(20deg);
+	transition: transform 2s;
+}
+h2{
+	transform: translateX(-20px) translateZ(-50px) rotateY(20deg);
+}
+.pagination,
+#frameContent{
+	transform: translateZ(-50px);
+}
+#tags:hover,
+h2:hover,
+fieldset:hover{
+	transform: translateY(-10px) translateX(40px) translateZ(50px);
+}
