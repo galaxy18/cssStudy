@@ -1,0 +1,123 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<style>
+@keyframes spin {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(360deg); }
+}
+		
+.test {
+	margin-top:40%;
+	
+	perspective: 100%;
+	perspective-origin: 50% 50%;
+}
+
+.spin {
+	position: relative;
+	width: 200px;
+	margin: 0 auto;
+}
+
+.spin div {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	background: rgba(255,255,255,0.1);
+	box-shadow: inset 0 0 30px rgba(125,125,125,0.8);
+	font-size: 20px;
+	text-align: center;
+	line-height: 400px;
+	color: rgba(0,0,0,0.5);
+	font-family: sans-serif;
+	text-transform: uppercase;
+	-webkit-transform-origin: top left;
+}
+
+.content{
+	transform-style: preserve-3d;
+	/*animation: spin 30s infinite linear;*/
+	perspective-origin: 50% 100px;
+}
+
+.spin{
+	transform-style: preserve-3d;
+	animation: spin 30s infinite linear;
+}
+
+.spin div{
+	left:100px;
+}
+.spin div:nth-child(1){
+	transform: rotateY(-60deg)
+		translateX(-100px) translateZ(-346px);
+}
+.spin div:nth-child(2){
+	transform: rotateY(0deg)
+		translateX(-100px) translateZ(-346px);
+}
+.spin div:nth-child(3){
+	transform: rotateY(60deg)
+		translateX(-100px) translateZ(-346px);
+}
+.spin div:nth-child(4){
+	transform: rotateY(120deg)
+		translateX(-100px) translateZ(-346px);
+}
+.spin div:nth-child(5){
+	transform: rotateY(180deg)
+		translateX(-100px) translateZ(-346px);
+}
+.spin div:nth-child(6){
+	transform: rotateY(-120deg)
+		translateX(-100px) translateZ(-346px);
+}
+body{
+	overflow-x: hidden;
+}
+
+.radiotest{
+	display: none;
+	background-color:#FFBBCC;
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px rgba(125,125,125,0.8);
+	text-align: center;
+	line-height: 100px;
+}
+</style>
+<link type="text/css" rel="stylesheet" href="test.css" media="screen">
+</head>
+<body>
+<div class="test">
+	<div class="content" style="transform: rotateZ(0deg) rotateX(-22deg) rotateY(0deg);">
+		<div class="spin">
+			<div class="front-pane">1</div>
+			<div class="back-pane">2</div>
+			<div class="top-pane">3</div>
+			<div class="bottom-pane">4</div>
+			<div class="left-pane">5</div>
+			<div class="right-pane">6</div>
+		</div>
+	</div>
+</div>
+<div class="radiotest">radiotest</div>
+</body>
+<script type="text/javascript">
+(function(){
+	function rotate(event){
+		var oDes =  document.querySelector(".des"),
+			oBoxA = document.querySelector(".box-a"),
+			oBoxB = document.querySelector(".box-b"),
+			oBoxG = document.querySelector(".box-g");
+			oContent = document.querySelector(".content");
+		//oDes.innerHTML = "Alpha(围绕Z轴顺（逆）时针旋转)：" +  Math.round(event.alpha) + "<br/>" + "Beta(围绕X轴前后旋转)：" +  Math.round(event.beta) + "<br/>" + "Gamma(围绕Y轴左右扭转)：" +  Math.round(event.gamma);
+		oContent.style.webkitTransform = "rotateZ(" + Math.round(event.alpha) +"deg)" +
+			" rotateX(" + Math.round(event.beta) +"deg)"+
+			" rotateY(" + Math.round(event.gamma) +"deg)";
+		
+	}
+	window.addEventListener("deviceorientation", rotate, false);
+})()
+</script>
+</html>
