@@ -1,0 +1,111 @@
+﻿body{
+	font-family:"MS PGothic";
+	font-weight:600;
+}
+
+body{
+	font-size:2vmax;
+	background-image:
+		url('assets/sachi2_58a.png'),
+		url('assets/sachi2_58d.png'),
+		url('assets/sachi2_paper1.jpg');
+	background-position: left top, right bottom, center;
+	background-size: 30%,30%,100% 100%;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	padding:5% 10%;
+	line-height:2em;
+	background-blend-mode: overlay;
+}
+
+h1,h2,hr,.border{
+	background-size:contain;
+	background-position:center;
+}
+
+h1, h2{
+	background-image:
+		url('assets/sachi2_23c_a.png'),
+		url('assets/sachi2_23c_b.png');
+	background-size:14em auto;
+	background-position: top, bottom;
+	background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+}
+hr, .border{
+	border:0px;
+	background-image:url('assets/sachi2_23g.png');
+	background-repeat: no-repeat;
+	padding:0.5em;
+	mix-blend-mode: multiply;
+}
+
+#tags, h1, h2, h4{
+	text-align:center;
+	color:#b98c46;
+}
+
+h1,h2{
+	text-shadow: 0px 0px 3px #E0C38C;
+	color:#b98c46;
+}
+
+h4{
+	color:#403028;
+	clear: both;
+	display: block;
+}
+
+h4, #caption, .newpage{
+	text-shadow: 0px 0px 3px #b98c46;
+}
+
+img{
+	clear: both;
+	display: block;
+	margin:auto;
+}
+
+h4, img, fieldset, #tags{
+	border-style:outset;
+	border-color:#b98c46;
+	box-shadow:3px 3px 5px #b98c46;
+}
+
+#caption{
+	border-style:inset;
+	border-color:#b98c46;
+	-moz-box-shadow:3px 3px 5px #b98c46 inset;
+	-webkit-box-shadow:3px 3px 5px #b98c46 inset;
+	box-shadow:3px 3px 5px #b98c46 inset;
+}
+
+.newpage{
+	padding:10% 5%;
+	border-style:outset;
+	border-color:#b98c46;
+	box-shadow:3px 3px 5px #b98c46;
+	font-weight:120;
+}
+
+#caption, #tags, .newpage{
+	background-image:url('assets/sachi2_paper1.jpg');
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	//background-position:center;
+	mix-blend-mode: multiply;
+}
+
+h1{
+	padding:3em 0;
+}
+h2{
+	padding:3em;
+}
+#caption, fieldset{
+	padding:5%;
+}
+#tags{
+	padding:2%;
+}
